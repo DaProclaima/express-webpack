@@ -54,7 +54,7 @@ The architecture is MVC type. Here is a representative tree of the project ( mad
 ```
 ## How to set up the app ?
 Get the project on your device from github repo by doing this:
-> git clone 
+> git clone https://github.com/DaProclaima/worker_genius.git
 
 Once you have NodeJS on your computer, simply go in the project directory and run a 
 > yarn install
