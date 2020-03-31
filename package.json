@@ -3,23 +3,39 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app/bin/www",
-    "dev": "eslint app && nodemon ./app/bin/www"
+    "start": "eslint app && node app/bin/www",
+    "dev": "eslint .eslintrc.json app && nodemon app/bin/www",
+    "watch": "encore dev --watch",
+    "build-dev": "webpack ./app/assets/javascripts/app.js --mode=development",
+    "build": "webpack ./app/assets/javascripts/app.js --mode=production"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "global": "^4.4.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "twig": "~0.10.3"
   },
   "devDependencies": {
+    "@chenfengyuan/datepicker": "^1.0.9",
+    "@symfony/webpack-encore": "^0.28.3",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
+    "bootstrap": "^4.4.1",
+    "core-js": "^3.6.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
-    "nodemon": "^2.0.2"
+    "jquery": "^3.4.1",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "popper.js": "^1.16.1",
+    "regenerator-runtime": "^0.13.5",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-notifier": "^1.8.0"
   }
 }
