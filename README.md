@@ -27,7 +27,7 @@ The architecture is MVC type. Here is a representative tree of the project ( mad
 .
 ├── README.md
 ├── app
-│   ├── app.js
+│   ├── index.js
 │   ├── bin
 │   │   └── www
 │   ├── controllers

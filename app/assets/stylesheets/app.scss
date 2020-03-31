@@ -1,0 +1,8 @@
+@import '~bootstrap';
+$fa-font-path: "~font-awesome/fonts/";
+@import "~font-awesome/scss/font-awesome";
+@import './layout/footer.scss';
+@import './layout/header.scss';
+body{
+  position: absolute;
+}
