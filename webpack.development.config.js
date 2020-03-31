@@ -3,6 +3,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
   entry: './app/assets/javascripts/index.js',
+  watch: true,
   module: {
     rules: [
       {
