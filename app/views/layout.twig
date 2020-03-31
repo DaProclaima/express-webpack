@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, user-scalable=no">
+    <title>Worker Genius - {% block title %} Bienvenue ! {% endblock %}</title>
+    <link rel='icon' href='/images/worker_genius_logo.png' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+  {% include 'partials/header.twig' %}
     {% block body %}{% endblock %}
+  {% include 'partials/footer.twig' %}
   </body>
 </html>
