@@ -21,7 +21,7 @@ coverage
 
 # build scripts
 Makefile
-webpack.development.config.js
+webpack.config.js
 webpack.production.config.js
 
 # configs

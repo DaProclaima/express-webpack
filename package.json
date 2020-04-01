@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "eslint app && node app/bin/www",
     "lint": "eslint .eslintrc.json app",
-    "dev": "eslint .eslintrc.json app && nodemon app/bin/www",
-    "watch": "encore dev --watch",
-    "build-dev": "webpack app/assets/javascripts/index.js --mode=development --config=webpack.development.config.js",
-    "build": "webpack app/assets/javascripts/index.js --mode=production --config=webpack.production.config.js"
+    "start:back": "eslint app && node app/bin/www",
+    "start:back:dev": "eslint .eslintrc.json app && nodemon app/bin/www",
+    "start:front:dev": "webpack-dev-server --open",
+    "build": "webpack app/assets/javascripts/index.js --mode=production --config=webpack.config.js",
+    "build:dev": "webpack app/assets/javascripts/index.js --mode=development --config=webpack.config.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -16,6 +16,7 @@
     "express": "~4.16.1",
     "global": "^4.4.0",
     "http-errors": "~1.6.3",
+    "lodash": "^4.17.15",
     "morgan": "~1.9.1",
     "twig": "~0.10.3"
   },
@@ -27,19 +28,28 @@
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
     "babel-loader": "^8.1.0",
+    "babel-minify-webpack-plugin": "^0.3.1",
     "bootstrap": "^4.4.1",
+    "bundle-loader": "^0.5.6",
+    "clean-webpack-plugin": "^3.0.0",
     "core-js": "^3.6.4",
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "file-loader": "^6.0.0",
     "font-awesome": "^4.7.0",
+    "html-loader": "^1.0.0",
     "html-webpack-plugin": "^4.0.3",
     "jquery": "^3.4.1",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "nodemon": "^2.0.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "popper.js": "^1.16.1",
     "regenerator-runtime": "^0.13.5",
     "resolve-url-loader": "^3.1.1",
@@ -50,6 +60,8 @@
     "url-loader": "^4.0.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-notifier": "^1.8.0"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-notifier": "^1.8.0",
+    "yarn-add-webpack-plugin": "^0.1.0"
   }
 }
