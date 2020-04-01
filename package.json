@@ -3,12 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "eslint app && node app/bin/www",
+    "start": "sass --watch ./app/assets/stylesheets/app.scss ./app/assets/stylesheets/app.css && eslint app && node app/bin/www",
     "lint": "eslint .eslintrc.json app",
-    "dev": "eslint .eslintrc.json app && nodemon app/bin/www",
-    "watch": "encore dev --watch",
-    "build-dev": "webpack app/assets/javascripts/index.js --mode=development --config=webpack.development.config.js",
-    "build": "webpack app/assets/javascripts/index.js --mode=production --config=webpack.production.config.js"
+    "dev": "sass --watch ./app/assets/stylesheets/app.scss ./app/assets/stylesheets/app.css && eslint .eslintrc.json app && nodemon app/bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
